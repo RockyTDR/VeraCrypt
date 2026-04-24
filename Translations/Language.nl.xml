@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <VeraCrypt>
-  <localization prog-version= "1.26.27">
+  <localization prog-version="1.24-Update8">
     <language langid="nl" name="Nederlands" en-name="Dutch" version="0.0.0" translators="Jan van der Wal, Peter Tak, Thomas De Rocker"/>
     <font lang="nl" class="normal" size="11" face="default"/>
     <font lang="nl" class="bold" size="13" face="Arial"/>
@@ -152,8 +152,8 @@
     <entry lang="nl" key="IDC_MOUNT_OPTIONS">Koppelopties...</entry>
     <entry lang="nl" key="IDC_MOUNT_READONLY">Volume koppelen als alleen-lezen</entry>
     <entry lang="nl" key="IDC_NEW_KEYFILES">Sleutelbestanden...</entry>
-    <entry lang="nl" key="IDC_OLD_PIM_HELP">(Leeg of 0 voor standaard iteraties)</entry>
-    <entry lang="nl" key="IDC_PIM_HELP">(leeg of 0 voor standaard iteraties)</entry>
+    <entry lang="nl" key="IDC_OLD_PIM_HELP">(Leeg of 0 voor standaardwaarden)</entry>
+    <entry lang="nl" key="IDC_PIM_HELP">(Leeg of 0 voor standaardwaarden)</entry>
     <entry lang="nl" key="IDC_PREF_BKG_TASK_ENABLE">Ingeschakeld</entry>
     <entry lang="nl" key="IDC_PREF_CACHE_PASSWORDS">Wachtw. in stuurprog.-geheugen opslaan</entry>
     <entry lang="nl" key="IDC_PREF_UNMOUNT_INACTIVE">Volume automatisch ontkoppelen na inactiviteit lezen/schrijven van</entry>
@@ -644,13 +644,13 @@
     <entry lang="nl" key="PIM_HIDVOL_TITLE">Verborgen volume PIM</entry>
     <entry lang="nl" key="PIM_HIDDEN_OS_TITLE">PIM voor het verborgen besturingssysteem</entry>
     <entry lang="nl" key="PIM_HELP">PIM (Personal Iterations Multiplier) is een waarde die het aantal iteraties dat door de header key-afleiding wordt gebruikt als volgt bepaalt:\n      Iteraties = 15000 + (PIM x 1000).\n\nIndien leeg of op 0 gezet, zal VeraCrypt een standaard waarde (485) gebruiken die een hoge veiligheid garandeert.\n\nWanneer het wachtwoord minder dan 20 tekens lang is, kan PIM niet kleiner zijn dan 485 om een minimaal beveiligingsniveau te handhaven.\nWanneer het wachtwoord 20 tekens of meer bedraagt, kan PIM op elke waarde worden ingesteld.\n\nEen PIM-waarde groter dan 485 leidt tot een tragere koppeling. Een kleine PIM-waarde (minder dan 485) zal leiden tot een snellere koppeling, maar het kan de veiligheid verminderen als het wachtwoord niet sterk genoeg is.</entry>
-    <entry lang="en" key="PIM_ARGON2_HELP">PIM (Personal Iterations Multiplier) controls the memory and time costs used by Argon2id header key derivation as follows:\n      Memory = min(64 MiB + ((PIM - 1) x 32 MiB), 1024 MiB)\n      Iterations = 3 + ((PIM - 1) / 3) for PIM 31 or lower, then 13 + (PIM - 31)\n\nWhen left empty or set to 0, VeraCrypt will use the default Argon2 PIM (12), which uses 416 MiB of memory and 6 iterations.\n\nWhen the password is less than 20 characters, Argon2 PIM can't be smaller than 12 in order to maintain a minimal security level.\nWhen the password is 20 characters or more, Argon2 PIM can be set to any value.\n\nAn Argon2 PIM larger than 12 increases memory usage up to 1024 MiB and then increases iterations. This will lead to slower mounting. A small Argon2 PIM (less than 12) will lead to quicker mounting but it can reduce security if the password is not strong enough.</entry>
+    <entry lang="nl" key="PIM_ARGON2_HELP">PIM (Personal Iterations Multiplier) bepaalt de geheugen- en tijdskosten van de Argon2id header key afleiding als volgt:\n      Geheugen = min(64 MiB + ((PIM - 1) x 32 MiB), 1024 MiB)\n      Iteraties = 3 + ((PIM - 1) / 3) voor PIM 31 of lager, daarna 13 + (PIM - 31)\n\nWanneer dit veld leeg wordt gelaten of op 0 wordt ingesteld, gebruikt VeraCrypt de standaard Argon2 PIM (12), die 416 MiB geheugen en 6 iteraties gebruikt.\n\nWanneer het wachtwoord minder dan 20 tekens bevat, mag Argon2 PIM niet kleiner zijn dan 12 om een minimaal beveiligingsniveau te behouden.\nWanneer het wachtwoord 20 tekens of meer bevat, kan Argon2 PIM op elke waarde worden ingesteld.\n\nEen Argon2 PIM groter dan 12 verhoogt het geheugengebruik tot 1024 MiB en verhoogt vervolgens het aantal iteraties. Dit leidt tot een tragere koppeling. Een kleine Argon2 PIM (minder dan 12) leidt tot een snellere koppeling, maar kan de beveiliging verminderen als het wachtwoord niet sterk genoeg is.</entry>
     <entry lang="nl" key="PIM_SYSENC_HELP">PIM (Personal Iterations Multiplier) is een waarde die het aantal iteraties dat door de header-sleutel-afleiding wordt gebruikt als volgt bepaalt:\n      Iteraties = PIM x 2048.\n\nIndien leeg gelaten of op 0 gezet, zal VeraCrypt een standaard waarde gebruiken die een hoge veiligheid garandeert.\n\nWanneer het wachtwoord minder dan 20 tekens lang is, kan PIM niet kleiner zijn dan 98 om een minimaal beveiligingsniveau te handhaven.\nWanneer het wachtwoord 20 tekens of meer bedraagt, kan PIM op elke waarde worden ingesteld.\n\nEen PIM-waarde groter dan 98 leidt tot een tragere start. Een kleine PIM-waarde (minder dan 98) zal leiden tot een snellere start, maar het kan de veiligheid verminderen als het wachtwoord niet sterk genoeg is.</entry>
     <entry lang="nl" key="PIM_SYSENC_CHANGE_WARNING">Onthoud het nummer om het systeem op te starten</entry>
     <entry lang="nl" key="PIM_LARGE_WARNING">U hebt een PIM-waarde gekozen die groter is dan de standaardwaarde van VeraCrypt.\nMerk op dat dit zal leiden tot een veel tragere koppeling/opstart.</entry>
-    <entry lang="en" key="PIM_ARGON2_LARGE_WARNING">You have chosen an Argon2 PIM value that is larger than VeraCrypt default value.\nPlease note that this can require more memory and lead to much slower mounting.</entry>
+    <entry lang="nl" key="PIM_ARGON2_LARGE_WARNING">U hebt een Argon2 PIM-waarde gekozen die hoger is dan de standaardwaarde van VeraCrypt.\nHoud er rekening mee dat dit meer geheugen kan vergen en kan leiden tot een aanzienlijk tragere koppeling.</entry>
     <entry lang="nl" key="PIM_SMALL_WARNING">U heeft gekozen voor een Personal Iterations Multiplier (PIM) die kleiner is dan de standaard VeraCrypt-waarde. Houd er rekening mee dat als uw wachtwoord niet sterk genoeg is, dit kan leiden tot een zwakkere beveiliging.\n\nBevestigt u dat u een sterk wachtwoord gebruikt?</entry>
-    <entry lang="en" key="PIM_ARGON2_SMALL_WARNING">You have chosen an Argon2 PIM value that is smaller than the default VeraCrypt value. Please note that if your password is not strong enough, this could lead to weaker security.\n\nDo you confirm that you are using a strong password?</entry>
+    <entry lang="nl" key="PIM_ARGON2_SMALL_WARNING">U hebt een Argon2-PIM-waarde gekozen die lager is dan de standaardwaarde van VeraCrypt. Houd er rekening mee dat als uw wachtwoord niet sterk genoeg is, dit kan leiden tot een lagere beveiliging.\n\nBevestigt u dat u een sterk wachtwoord gebruikt?</entry>
     <entry lang="nl" key="PIM_SYSENC_TOO_BIG">De maximale waarde voor Personal Iterations Multiplier (PIM) voor systeemversleuteling is 65535.</entry>
     <entry lang="nl" key="PIM_TITLE">PIM volume</entry>
     <entry lang="nl" key="HIDDEN_FILES_PRESENT_IN_KEYFILE_PATH">\n\nWAARSCHUWING: verborgen bestand(en) gevonden in een zoekpad voor sleutelbestanden. Zulke verborgen bestanden kunnen niet gebruikt worden als sleutelbestanden. Als u ze als sleutelbestanden wilt gebruiken, verwijder dan hun eigenschap 'verborgen' (klik met de rechtermuisknop op elk bestand, selecteer 'eigenschappen', vink 'verborgen' uit en klik op OK). Opmerking: verborgen bestanden zijn alleen zichtbaar als de overeenkomstige optie is ingeschakeld (computer &gt; organiseren &gt; 'map- en zoekopties' &gt; beeld).</entry>
@@ -1107,7 +1107,7 @@
     <entry lang="nl" key="ALGO_NOT_SUPPORTED_FOR_TRUECRYPT_MODE">Dit algoritme wordt niet ondersteund voor de TrueCrypt-modus.</entry>
     <entry lang="nl" key="PIM_NOT_SUPPORTED_FOR_TRUECRYPT_MODE">PIM (Personal Iterations Multiplier) wordt niet ondersteund voor de TrueCrypt-modus.</entry>
     <entry lang="nl" key="PIM_REQUIRE_LONG_PASSWORD">Het wachtwoord moet 20 of meer tekens bevatten om de opgegeven PIM te kunnen gebruiken.\nKortere wachtwoorden kunnen alleen worden gebruikt als de PIM 485 of hoger is.</entry>
-    <entry lang="en" key="PIM_ARGON2_REQUIRE_LONG_PASSWORD">Password must contain 20 or more characters in order to use the specified Argon2 PIM.\nShorter passwords can only be used if the Argon2 PIM is 12 or greater.</entry>
+    <entry lang="nl" key="PIM_ARGON2_REQUIRE_LONG_PASSWORD">Het wachtwoord moet uit minimaal 20 tekens bestaan om de opgegeven Argon2-PIM te kunnen gebruiken.\nKortere wachtwoorden kunnen alleen worden gebruikt als de Argon2-PIM 12 of hoger is.</entry>
     <entry lang="nl" key="BOOT_PIM_REQUIRE_LONG_PASSWORD">Het pre-boot-authenticatiewachtwoord moet 20 of meer tekens bevatten om de opgegeven PIM te kunnen gebruiken.\nKortere wachtwoorden kunnen alleen worden gebruikt als de PIM 98 of meer tekens bevat.</entry>
     <entry lang="nl" key="KEYFILES_NOT_SUPPORTED_FOR_SYS_ENCRYPTION">Sleutelbestanden worden momenteel niet ondersteund voor systeemversleuteling.</entry>
     <entry lang="nl" key="CANNOT_RESTORE_KEYBOARD_LAYOUT">Waarschuwing: VeraCrypt kon de oorspronkelijke toetsenbordindeling niet herstellen. Dit kan ertoe leiden dat u een verkeerd wachtwoord invoert.</entry>
@@ -1648,16 +1648,16 @@
     <entry lang="nl" key="MOUNTPOINT_BLOCKED">FOUT: Het koppelpunt van het volume is geblokkeerd omdat het een beveiligde systeemmap overschrijft.\n\nKies een ander koppelpunt.</entry>
     <entry lang="nl" key="MOUNTPOINT_NOTALLOWED">FOUT: het koppelpunt voor het volume is niet toegestaan omdat het een map overschrijft die deel uitmaakt van de omgevingsvariabele PATH.\n\nKies een ander koppelpunt.</entry>
     <entry lang="nl" key="INSECURE_MODE">[ONVEILIGE MODUS]</entry>
-    <entry lang="nl" key="IDC_DISABLE_SCREEN_PROTECTION">Bescherming tegen schermafbeeldingen en schermopnames uitschakelen</entry>
-    <entry lang="nl" key="DISABLE_SCREEN_PROTECTION_WARNING">WAARSCHUWING: Het uitschakelen van schermbeveiliging vermindert de veiligheid aanzienlijk. Schakel deze optie ALLEEN in als u een specifieke noodzaak hebt om de interface van VeraCrypt vast te leggen. Dit kan gevoelige gegevens blootstellen aan schermafbeeldingstools en schermopnamefuncties zoals Windows 11 Recall.</entry>
-    <entry lang="nl" key="MEMORY_COST">Geheugenkosten</entry>
-    <entry lang="en" key="IDT_KDF_ALGO">KDF Algorithm</entry>
-    <entry lang="en" key="IDD_PREFERENCES_TAB_GENERAL">General</entry>
-    <entry lang="en" key="IDD_PREFERENCES_TAB_ACTIONS">Actions</entry>
-    <entry lang="en" key="IDD_PREFERENCES_TAB_PASSWORD">Password</entry>
-    <entry lang="en" key="IDC_SECURE_DESKTOP_ENABLE_IME">Enable Input Method Editor (IME) in Secure Desktop</entry>
-    <entry lang="en" key="ENABLE_IME_IN_SECURE_DESKTOP_WARNING">WARNING: Enable this option only if you are encountering issues when selecting Keyfiles/Tokens under Secure Desktop.</entry>
-    <entry lang="en" key="ERR_KEY_DERIVATION_FAILED">Key derivation failed. This may be caused by insufficient memory or an interrupted operation.</entry>
+    <entry lang="nl" key="IDC_DISABLE_SCREEN_PROTECTION">Bescherming tegen screenshots en schermopname uitschakelen</entry>
+    <entry lang="nl" key="DISABLE_SCREEN_PROTECTION_WARNING">WAARSCHUWING: het uitschakelen van schermbeveiliging vermindert de beveiliging aanzienlijk. Schakel deze optie ALLEEN in als u een specifieke behoefte hebt om de interface van VeraCrypt vast te leggen. Dit kan gevoelige gegevens blootstellen aan screenshotprogramma's en schermopnamefuncties zoals Windows 11 Recall.</entry>
+    <entry lang="nl" key="MEMORY_COST">Geheugengebruik</entry>
+    <entry lang="nl" key="IDT_KDF_ALGO">KDF-algoritme</entry>
+    <entry lang="nl" key="IDD_PREFERENCES_TAB_GENERAL">Algemeen</entry>
+    <entry lang="nl" key="IDD_PREFERENCES_TAB_ACTIONS">Acties</entry>
+    <entry lang="nl" key="IDD_PREFERENCES_TAB_PASSWORD">Wachtwoord</entry>
+    <entry lang="nl" key="IDC_SECURE_DESKTOP_ENABLE_IME">De invoermethode-editor (IME) inschakelen in Secure Desktop</entry>
+    <entry lang="nl" key="ENABLE_IME_IN_SECURE_DESKTOP_WARNING">WAARSCHUWING: schakel deze optie alleen in als u problemen ondervindt bij het selecteren van sleutelbestanden/tokens onder Secure Desktop.</entry>
+    <entry lang="nl" key="ERR_KEY_DERIVATION_FAILED">Het afleiden van de sleutel is mislukt. Dit kan worden veroorzaakt door onvoldoende geheugen of een onderbroken bewerking.</entry>
   </localization>
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
     <xs:element name="VeraCrypt">
